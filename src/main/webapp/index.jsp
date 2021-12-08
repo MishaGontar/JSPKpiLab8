@@ -1,3 +1,4 @@
+<%@ page import="DataBase.Cookies" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -5,9 +6,8 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<% // Перевірка user на регестрацію
+    if(Cookies.getCookieByName(request,"user") == null) response.sendRedirect(request.getContextPath()+"/RegistrationTest.jsp");
+%>
 </body>
 </html>
