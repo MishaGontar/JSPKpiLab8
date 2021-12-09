@@ -38,19 +38,22 @@
             <hr>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="email" placeholder="Enter Email" name="email" required>
 
             <label for="first_name"><b>First Name</b></label>
             <input type="text" placeholder="Enter First Name" name="first_name" required>
-
-            <label for="second_name"><b>Second Name</b></label>
-            <input type="text" placeholder="Enter Second Name" name="second_name" required>
 
             <label for="last_name"><b>Last Name</b></label>
             <input type="text" placeholder="Enter Last Name" name="last_name" required>
 
             <label for="phone"><b>Phone</b></label>
             <input type="text" placeholder="Enter Phone" name="phone" required>
+
+            <label for="datebirthday"><b>Datebirthday</b></label>
+            <input type="date" placeholder="Enter Your Birthday" name="datebirthday" required>
+
+            <label for="info"><b>Phone</b></label>
+            <input type="text" placeholder="Enter Info" name="info" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
