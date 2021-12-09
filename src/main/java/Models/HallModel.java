@@ -15,8 +15,10 @@ public class HallModel {
     private String timeOpen;
     private String timeClose;
 
-    HallModel(){}
-    private HallModel(int id,String name , String address , String photo , String timeOpen ,String timeClose){
+    HallModel() {
+    }
+
+    private HallModel(int id, String name, String address, String photo, String timeOpen, String timeClose) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -25,13 +27,13 @@ public class HallModel {
         this.timeClose = timeClose;
     }
 
-    public static HallModel getHallById(int id){
+    public static HallModel getHallById(int id) {
         Connection connection = DbConnetion.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("Select * from halls where Id = ?");
-            preparedStatement.setInt(1,id);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 return new HallModel(
                         resultSet.getInt("Id"),
                         resultSet.getString("Name"),
