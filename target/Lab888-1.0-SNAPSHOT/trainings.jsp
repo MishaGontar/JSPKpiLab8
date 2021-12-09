@@ -48,18 +48,18 @@
             <th class="th">Price</th>
             <th class="th">Select</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr class="tr" style="color: white;">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td><input type="checkbox" name="select" value="select" /></td>
         </tr>
     </table>
-        <input type="submit" name="Buy" class="button_trainings" value="Buy">
+        <button type="submit" class="button_trainings">Buy</button>
     </form>
 </div>
 </div>
