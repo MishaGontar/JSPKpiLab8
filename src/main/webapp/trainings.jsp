@@ -17,7 +17,7 @@
     <a href="index.jsp" >Home</a>
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
 
-    <a href="trainingController" methods="get">Trainings</a>
+    <a href="trainingController">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
     <a href="user.jsp">User</a>
     <form style="display:inline" action="LogOut">
@@ -52,6 +52,7 @@
             <% if (u.getRole()<=2){%>
             <th class="th">Delete</th>
             <%}%>
+            <th class="th">Buy</th>
         </tr>
         <c:forEach var="par" items="${lesson}">
           <form action="" method="post">
@@ -63,14 +64,17 @@
                 <td>${par.duration}</td>
                 <td>${par.quantity}</td>
                 <td>${par.id}</td>
+                <td>
                 <% if (u.getRole()<=2){%>
                 <form action="" method="post">
-                        <%--КНОПКА DELETE--%>
+                    <button class="button_del" type="submit" action="delete">Delete</button>
                 </form>
-                <%}%>
+                <%}%></td>
+                <td>
+                    <input hidden value="${par.id}" name ="lesson">
+                    <button type="submit" class="button_trainings">Buy</button></td>
             </tr>
-              <input hidden value="${par.id}" name ="lesson">
-            <button type="submit" class="button_trainings">Buy</button>
+
             </form>
         </c:forEach>
     </table>

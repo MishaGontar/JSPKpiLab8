@@ -14,8 +14,9 @@
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
     <a href="trainingController">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
-    <form style="display:inline" action="LogOut" method="get">
-        <button class="button_log" type="submit">Log Out</button>
+    <a href="user.jsp">User</a>
+    <form style="display:inline" action="LogOut">
+        <button class="button_log" type="submit" action="LogOut">Log Out</button>
     </form>
     <%} else {%>
     <a href="log_in.jsp">Log In</a>
