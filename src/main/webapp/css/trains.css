@@ -1,0 +1,27 @@
+.trainings_table {margin: 0 auto;
+border-collapse: collapse;
+border-spacing: 0;
+width: 95%;
+border: 2px solid #ddd;
+}
+.trainings_table .tr{
+    background-color: #626262;
+}
+.trainings_table .th, .td {
+    text-align: left;
+    padding: 16px;
+}
+.trainings_table .tr:nth-child(even) {
+    background-color: #ABABAB;
+}
+
+.button_trainings {
+    margin-top: 20px;
+    float: right;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    background-color: #04AA6D;
+    color: white;
+}
