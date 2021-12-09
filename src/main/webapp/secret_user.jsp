@@ -17,9 +17,13 @@
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
     <a href="trainings.jsp">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
+    <a href="user.jsp">User</a>
     <%} else {%>
     <a href="log_in.jsp">Log In</a>
     <a href="sign_up.jsp">Sign Up</a>
+    <form style="display:inline" action="LogOut">
+        <button class="button_log" type="submit" action="LogOut">Log Out</button>
+    </form>
     <% }; %>
     <div id="google_translate_element" style="float:right"></div>
 

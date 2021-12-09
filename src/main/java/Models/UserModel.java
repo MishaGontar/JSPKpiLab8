@@ -8,18 +8,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserModel {
-    private String phone;
-    private String FName;
-    private String LName;
-    private int role;
+    private static String email;
+    private static String info;
+    private static String phone;
+    private static String FName;
+    private static String LName;
+    private static int role;
 
     UserModel(){}
 
-    private UserModel(String phone,String FName , String LName , int role){
-        this.phone = phone;
-        this.FName = FName;
-        this.LName = LName;
-        this.role = role;
+    private UserModel(String phone,String FName , String LName , String email,String info, int role){
+        UserModel.phone = phone;
+        UserModel.FName = FName;
+        UserModel.LName = LName;
+        UserModel.role = role;
+        UserModel.email = email;
+        UserModel.info = info;
     }
     public static UserModel getUserById(int id){
         try {
@@ -32,6 +36,8 @@ public class UserModel {
                         resultSet.getString("Phone"),
                         resultSet.getString("FName"),
                         resultSet.getString("LName"),
+                        resultSet.getString("Email"),
+                        resultSet.getString("Info"),
                         resultSet.getInt("RoleId"));
             }
         } catch (SQLException e) {
@@ -50,7 +56,10 @@ public class UserModel {
                         resultSet.getString("Phone"),
                         resultSet.getString("FName"),
                         resultSet.getString("LName"),
-                        resultSet.getInt("RoleId"));
+                        resultSet.getString("Email"),
+                        resultSet.getString("Info"),
+                        resultSet.getInt("RoleId")
+                        );
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -83,6 +92,8 @@ public class UserModel {
                         resultSet.getString("Phone"),
                         resultSet.getString("FName"),
                         resultSet.getString("LName"),
+                        resultSet.getString("Email"),
+                        resultSet.getString("Info"),
                         resultSet.getInt("RoleId"));
             }
         } catch (SQLException e) {
@@ -91,19 +102,27 @@ public class UserModel {
         return null;
     }
 
-    public String getPhone() {
+    public static String getPhone() {
         return phone;
     }
 
-    public String getFName() {
+    public static String getFName() {
         return FName;
     }
 
-    public String getLName() {
+    public static String getLName() {
         return LName;
     }
 
-    public int getRole() {
+    public static int getRole() {
         return role;
     }
+
+    public static String getEmail(){
+        return email;
+    }
+    public static String getInfo(){
+        return info;
+    }
+
 }
