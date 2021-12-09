@@ -53,6 +53,7 @@
             <th class="th">Delete</th>
             <%}%>
             <th class="th">Buy</th>
+
         </tr>
         <c:forEach var="par" items="${lesson}">
           <form action="" method="post">
@@ -64,12 +65,12 @@
                 <td>${par.duration}</td>
                 <td>${par.quantity}</td>
                 <td>${par.id}</td>
-                <td>
                 <% if (u.getRole()<=2){%>
+                <td>
                 <form action="" method="post">
                     <button class="button_del" type="submit" action="delete">Delete</button>
-                </form>
-                <%}%></td>
+                </form></td>
+                <%}%>
                 <td>
                     <input hidden value="${par.id}" name ="lesson">
                     <button type="submit" class="button_trainings">Buy</button></td>
