@@ -31,14 +31,8 @@ public class UserModel {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from users where id = ?");
             preparedStatement.setInt(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                return new UserModel(
-                        resultSet.getString("Phone"),
-                        resultSet.getString("FName"),
-                        resultSet.getString("LName"),
-                        resultSet.getString("Email"),
-                        resultSet.getString("Info"),
-                        resultSet.getInt("RoleId"));
+            if(resultSet.next()){
+                return getUserModel(resultSet);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,21 +45,15 @@ public class UserModel {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from users where Phone = ?");
             preparedStatement.setString(1,phone);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                return new UserModel(
-                        resultSet.getString("Phone"),
-                        resultSet.getString("FName"),
-                        resultSet.getString("LName"),
-                        resultSet.getString("Email"),
-                        resultSet.getString("Info"),
-                        resultSet.getInt("RoleId")
-                        );
+            if(resultSet.next()){
+                return getUserModel(resultSet);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
+
     public static void addUser(String email , String name , String lastName,String phone ,String password){
         try {
             Connection connection = DbConnetion.getConnection();
@@ -87,19 +75,24 @@ public class UserModel {
             preparedStatement.setString(1,phone);
             preparedStatement.setString(2,password);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                return new UserModel(
-                        resultSet.getString("Phone"),
-                        resultSet.getString("FName"),
-                        resultSet.getString("LName"),
-                        resultSet.getString("Email"),
-                        resultSet.getString("Info"),
-                        resultSet.getInt("RoleId"));
+            if(resultSet.next()){
+                return getUserModel(resultSet);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private static UserModel getUserModel(ResultSet resultSet) throws SQLException {
+        return new UserModel(
+                resultSet.getString("Phone"),
+                resultSet.getString("FName"),
+                resultSet.getString("LName"),
+                resultSet.getString("Email"),
+                resultSet.getString("Info"),
+                resultSet.getInt("RoleId")
+        );
     }
 
     public static String getPhone() {

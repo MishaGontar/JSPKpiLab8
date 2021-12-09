@@ -17,7 +17,7 @@
     <a href="index.jsp" >Home</a>
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
 
-    <a href="trainingController" methods="get">Trainings</a>
+    <a href="trainingController">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
     <a href="user.jsp">User</a>
     <form style="display:inline" action="LogOut">
@@ -64,14 +64,14 @@
                 <td>${par.duration}</td>
                 <td>${par.quantity}</td>
                 <td>${par.id}</td>
+                <input hidden value="${par.id}" name ="lesson">
                 <td>
                 <% if (u.getRole()<=2){%>
-                <form action="" method="post">
+                <form action="trainingController" method="post">
                     <button class="button_del" type="submit" action="delete">Delete</button>
                 </form>
                 <%}%></td>
                 <td>
-                    <input hidden value="${par.id}" name ="lesson">
                     <button type="submit" class="button_trainings">Buy</button></td>
             </tr>
 

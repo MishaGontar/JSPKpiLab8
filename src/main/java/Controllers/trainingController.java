@@ -23,6 +23,7 @@ public class trainingController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        LessonModel.removeLesson(Integer.parseInt(request.getParameter("lesson")));
+        response.sendRedirect(request.getContextPath()+"/trainingController");
     }
 }

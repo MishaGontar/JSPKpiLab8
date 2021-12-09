@@ -15,8 +15,7 @@ public class HallModel {
     private String timeOpen;
     private String timeClose;
 
-    HallModel() {
-    }
+    HallModel() {}
 
     private HallModel(int id, String name, String address, String photo, String timeOpen, String timeClose) {
         this.id = id;

@@ -64,14 +64,14 @@
                 <td>${par.duration}</td>
                 <td>${par.quantity}</td>
                 <td>${par.id}</td>
+                <input hidden value="${par.id}" name ="lesson">
                 <td>
                 <% if (u.getRole()<=2){%>
-                <form action="" method="post">
+                <form action="trainingController" method="post">
                     <button class="button_del" type="submit" action="delete">Delete</button>
                 </form>
                 <%}%></td>
                 <td>
-                    <input hidden value="${par.id}" name ="lesson">
                     <button type="submit" class="button_trainings">Buy</button></td>
             </tr>
 
