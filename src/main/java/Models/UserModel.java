@@ -73,4 +73,20 @@ public class UserModel {
         }
         return null;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getFName() {
+        return FName;
+    }
+
+    public String getLName() {
+        return LName;
+    }
+
+    public int getRole() {
+        return role;
+    }
 }

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bohdan
-  Date: 09.12.2021
-  Time: 6:55
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,7 +24,7 @@
 </div>
 <div class="container">
     <br>
-    <form action="" style="border: 3px solid #f1f1f1;color: whitesmoke; background-color: rgba(186,186,186,0.5);">
+    <form action="LoginController" style="border: 3px solid #f1f1f1;color: whitesmoke; background-color: rgba(186,186,186,0.5);" method="get">
         <div class="container1">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>

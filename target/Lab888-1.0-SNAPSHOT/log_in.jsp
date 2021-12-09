@@ -24,7 +24,7 @@
 </div>
 <div class="container">
     <br>
-<form action="" method="post">
+<form action="LoginController" method="post">
 
     <div class="container1">
         <h1>Log In</h1>
