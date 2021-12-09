@@ -1,0 +1,8 @@
+.info-container{
+    width:20%;
+    margin-top: 30px;
+    padding: 40px;
+    border: 3px solid #f1f1f1;
+    color: whitesmoke;
+    background-color: rgba(186,186,186,0.5);
+}
