@@ -1,12 +1,10 @@
-<%@ page import="DataBase.Cookies" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Sport club</title>
+<link rel="stylesheet" href="css/main.css">
+<title>Sport club</title>
 </head>
-<body style="background-image: url(img/1.jpg);">
+<body style="background-image: url(img/2.png);">
 <div class="topnav">
     <a href="index.jsp">Home</a>
     <a href="trainings.jsp">Trainings</a>
@@ -24,7 +22,5 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
 
-
 </body>
-
 </html>

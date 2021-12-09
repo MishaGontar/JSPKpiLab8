@@ -3,13 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sport club</title>
 </head>
-<body>
-<%
-    if(Cookies.getCookieByName(request,"user") == null) response.sendRedirect(request.getContextPath()+"/RegistrationTest.jsp");
-%>
-<h1>Hello it`s me</h1>
+<body style="background-image: url(img/1.jpg);">
+<div class="topnav">
+    <a href="index.jsp">Home</a>
+    <a href="trainings.jsp">Trainings</a>
+    <a href="info_hall.jsp">Halls</a>
+    <a href="log_in.jsp">Log In</a>
+    <a href="sign_up.jsp">Sign Up</a>
+    <div id="google_translate_element" style="float:right"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+
 
 </body>
+
 </html>
