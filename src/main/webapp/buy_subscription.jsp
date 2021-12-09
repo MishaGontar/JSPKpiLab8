@@ -18,6 +18,15 @@
     <a href="info_hall.jsp">Halls</a>
     <a href="log_in.jsp">Log In</a>
     <a href="sign_up.jsp">Sign Up</a>
+    <div id="google_translate_element" style="float:right"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
 
 </body>
