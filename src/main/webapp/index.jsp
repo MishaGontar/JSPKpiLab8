@@ -13,7 +13,6 @@
 <div class="topnav">
     <a href="index.jsp">Home</a>
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
-
     <a href="trainings.jsp">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
     <%} else {%>

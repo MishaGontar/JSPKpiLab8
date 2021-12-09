@@ -9,6 +9,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/trains.css">
     <title>Sport club</title>
 </head>
 <body style="background-image: url(img/4.png);">
@@ -35,18 +36,31 @@
 
 <div style="margin: 20px 0 ;">
 <div class="container">
+    <form method="post">
     <table class="trainings_table">
         <tr class="tr" style="color: white;">
             <th class="th">Name</th>
-            <th class="th">Description</th>
+            <th class="th">Hall</th>
             <th class="th">Trainer</th>
-            <th class="th">Price UAH</th>
-            <th class="th"></th>
+            <th class="th">Date</th>
+            <th class="th">Duration</th>
+            <th class="th">Quantity</th>
+            <th class="th">Price</th>
+            <th class="th">Select</th>
         </tr>
         <tr>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
+        <input type="submit" name="Buy" class="button_trainings" value="Buy">
+    </form>
 </div>
 </div>
 </body>

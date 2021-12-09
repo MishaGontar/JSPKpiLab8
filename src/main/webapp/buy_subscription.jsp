@@ -39,7 +39,7 @@
                 <form action="" method="post">
                     <div class="row">
                         <div class="col-50">
-                            <%--@declare id="fname"--%><h3>Payment</h3>
+                           <h3>Payment</h3>
                             <label for="fname">Accepted Cards</label>
                             <div class="icon-container">
                                 <i class="fa fa-cc-visa" style="color:navy;"></i>
