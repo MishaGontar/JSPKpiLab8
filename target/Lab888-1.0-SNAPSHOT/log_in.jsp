@@ -34,8 +34,11 @@
 <form action="" method="post">
 
     <div class="container1">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <h1>Log In</h1>
+        <p>Please fill in this form to log in an account.</p>
+        <hr>
+        <label for="uname"><b>Phone</b></label>
+        <input type="text" placeholder="Enter Phone Number" name="phone" required>
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
