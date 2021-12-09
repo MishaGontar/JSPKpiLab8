@@ -21,7 +21,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 19px;
 }
 
 .topnav a:hover {
@@ -29,6 +29,19 @@ body {
     color: white;
 }
 
+.button_log {
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color:white;
+    font-size: 19px;
+    color: #000000;
+    padding: 14px 16px;
+    border: none;
+    cursor: pointer;}
+
+.button_log:hover {
+    background-color: #333;
+    color: white;
+}
 .container{
     margin: 0 auto;
     width: 75%;
