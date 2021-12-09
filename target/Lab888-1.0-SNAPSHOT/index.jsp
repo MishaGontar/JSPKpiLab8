@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link rel="stylesheet" href="css/main.css">
     <title>Sport club</title>
 </head>

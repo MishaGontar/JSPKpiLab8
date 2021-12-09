@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bohdan
-  Date: 09.12.2021
-  Time: 6:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,7 +24,7 @@
 </div>
 <div class="container">
     <br>
-<form action="" method="post">
+<form action="LoginController" method="post">
 
     <div class="container1">
         <h1>Log In</h1>
