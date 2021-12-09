@@ -1,4 +1,4 @@
-<%--
+<%@ page import="DataBase.Cookies" %><%--
   Created by IntelliJ IDEA.
   User: Bohdan
   Date: 09.12.2021
@@ -14,10 +14,13 @@
 <body style="background-image: url(img/9.png);">
 <div class="topnav">
     <a href="index.jsp">Home</a>
+    <% if (Cookies.getCookieByName(request,"user") != null) {%>
     <a href="trainings.jsp">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
+    <%} else {%>
     <a href="log_in.jsp">Log In</a>
     <a href="sign_up.jsp">Sign Up</a>
+    <% }; %>
     <div id="google_translate_element" style="float:right"></div>
 
     <script type="text/javascript">
