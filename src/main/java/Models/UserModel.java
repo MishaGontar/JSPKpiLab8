@@ -21,7 +21,24 @@ public class UserModel {
         this.LName = LName;
         this.role = role;
     }
-
+    public static UserModel getUserById(int id){
+        try {
+            Connection connection = DbConnetion.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from users where id = ?");
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                return new UserModel(
+                        resultSet.getString("Phone"),
+                        resultSet.getString("FName"),
+                        resultSet.getString("LName"),
+                        resultSet.getInt("RoleId"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     public static UserModel getUserByPhone(String phone){
         try {
             Connection connection = DbConnetion.getConnection();
@@ -73,6 +90,7 @@ public class UserModel {
         }
         return null;
     }
+    public static
 
     public String getPhone() {
         return phone;

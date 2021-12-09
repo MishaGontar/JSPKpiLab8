@@ -26,20 +26,20 @@ create table services
 );
 create table users
 (
-    id int auto_increment
+    id               int auto_increment
         primary key,
-    RoleId int not null,
-    FName char(30) not null,
-    LName char(30) not null,
-    Phone char(15) not null,
-    Email char(30) null,
-    Info char(30) null,
-    DateRegistration date null,
-    DateOfBirth date null,
-    PhotoPath char(100) null,
-    PasswordHash char(100) not null,
+    RoleId           int default 3 null,
+    FName            char(30)      not null,
+    LName            char(30)      not null,
+    Phone            char(15)      not null,
+    Email            char(30)      null,
+    Info             char(30)      null,
+    DateRegistration date          null,
+    DateOfBirth      date          null,
+    PhotoPath        char(100)     null,
+    PasswordHash     char(100)     not null,
     constraint users_roles_id_fk
-        foreign key (RoleId) references laba.roles (Id)
+        foreign key (RoleId) references roles (Id)
 );
 create table lessons
 (
