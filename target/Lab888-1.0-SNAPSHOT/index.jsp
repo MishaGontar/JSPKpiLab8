@@ -12,10 +12,10 @@
 <div class="topnav">
     <a href="index.jsp">Home</a>
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
-    <a href="trainingController" methods="get">Trainings</a>
+    <a href="trainingController">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
-    <form style="display:inline" action="LogOut">
-        <button class="button_log" type="submit" action="LogOut">Log Out</button>
+    <form style="display:inline" action="LogOut" method="get">
+        <button class="button_log" type="submit">Log Out</button>
     </form>
     <%} else {%>
     <a href="log_in.jsp">Log In</a>
