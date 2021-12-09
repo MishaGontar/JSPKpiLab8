@@ -49,12 +49,6 @@
             <label for="phone"><b>Phone</b></label>
             <input type="text" placeholder="Enter Phone" name="phone" required>
 
-            <label for="datebirthday"><b>Datebirthday</b></label>
-            <input type="date" placeholder="Enter Your Birthday" name="datebirthday" required>
-
-            <label for="info"><b>Phone</b></label>
-            <input type="text" placeholder="Enter Info" name="info" required>
-
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 

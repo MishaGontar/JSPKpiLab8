@@ -38,13 +38,10 @@
             <hr>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="email" placeholder="Enter Email" name="email" required>
 
             <label for="first_name"><b>First Name</b></label>
             <input type="text" placeholder="Enter First Name" name="first_name" required>
-
-            <label for="second_name"><b>Second Name</b></label>
-            <input type="text" placeholder="Enter Second Name" name="second_name" required>
 
             <label for="last_name"><b>Last Name</b></label>
             <input type="text" placeholder="Enter Last Name" name="last_name" required>
