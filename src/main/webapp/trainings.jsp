@@ -1,10 +1,6 @@
-<%@ page import="DataBase.Cookies" %><%--
-  Created by IntelliJ IDEA.
-  User: Bohdan
-  Date: 09.12.2021
-  Time: 6:52
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="DataBase.Cookies" %>
+<%@ page import="Models.UserModel" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,12 +8,16 @@
     <link rel="stylesheet" href="css/trains.css">
     <title>Sport club</title>
 </head>
+<%
+ String phone = Cookies.getCookieByName(request,"user").getValue();
+ UserModel u = UserModel.getUserByPhone(phone);
+%>
 <body style="background-image: url(img/4.png);">
 <div class="topnav">
-    <a href="index.jsp">Home</a>
+    <a href="index.jsp" >Home</a>
     <% if (Cookies.getCookieByName(request,"user") != null) {%>
 
-    <a href="trainings.jsp">Trainings</a>
+    <a href="trainingController" methods="get">Trainings</a>
     <a href="info_hall.jsp">Halls</a>
     <a href="user.jsp">User</a>
     <form style="display:inline" action="LogOut">
@@ -40,7 +40,6 @@
 
 <div style="margin: 20px 0 ;">
 <div class="container">
-    <form method="post">
     <table class="trainings_table">
         <tr class="tr" style="color: white;">
             <th class="th">Name</th>
@@ -50,21 +49,31 @@
             <th class="th">Duration</th>
             <th class="th">Quantity</th>
             <th class="th">Price</th>
-            <th class="th">Select</th>
+            <% if (u.getRole()<=2){%>
+            <th class="th">Delete</th>
+            <%}%>
         </tr>
-        <tr class="tr" style="color: white;">
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td><input type="checkbox" name="select" value="select" /></td>
-        </tr>
+        <c:forEach var="par" items="${lesson}">
+          <form action="" method="post">
+            <tr class="tr" style="color: white;">
+                <td>${par.id}</td>
+                <td>${par.hall_id}</td>
+                <td>${par.trainer_id}</td>
+                <td>${par.dateOfLesson}</td>
+                <td>${par.duration}</td>
+                <td>${par.quantity}</td>
+                <td>${par.id}</td>
+                <% if (u.getRole()<=2){%>
+                <form action="" method="post">
+                        <%--КНОПКА DELETE--%>
+                </form>
+                <%}%>
+            </tr>
+              <input hidden value="${par.id}" name ="lesson">
+            <button type="submit" class="button_trainings">Buy</button>
+            </form>
+        </c:forEach>
     </table>
-        <button type="submit" class="button_trainings">Buy</button>
-    </form>
 </div>
 </div>
 </body>

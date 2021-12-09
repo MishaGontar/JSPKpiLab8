@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:mysql://localhost:3307/laba</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="@localhost" uuid="3bc81857-ea4e-47af-9561-132b7106e633">
+    <data-source source="LOCAL" name="laba@localhost [2]" uuid="7419dc9e-df3e-43e0-a008-6e40190f782e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/laba</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
